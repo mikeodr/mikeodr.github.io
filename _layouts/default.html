@@ -10,7 +10,7 @@
 
         <!-- Custom CSS -->
         <link rel="stylesheet" href="/css/main.css">
-        <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+        <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.1/css/font-awesome.css" rel="stylesheet">
     </head>
     <body>
 		<section class="sidebar">
@@ -19,37 +19,21 @@
                 <span id="last">O'Driscoll</span>
             </section>
             <section class="sections">
-                <ul>
-                <li>
-                    <a href="/about">About</a>
-                </li>
-                <li>
-                    <a href="/">Posts</a> 
-                </li>
-            </ul>
+                <a href="/">posts</a> 
+                <a href="/about">about</a>
             </section>
+
+            <div class="contact">
+              <p>
+              <i class="fa fa-github"></i> <a href="https://github.com/specter">GitHub</a><br />
+              <i class="fa fa-linkedin"></i> <a href="ca.linkedin.com/in/mikeodr">LinkedIn</a>
+              </p>
+            </div>
+        </div>
 		</section>
 		
 		<section class="content">
 			{{ content }}
 		</section>
-
-          <!--<div class="footer">
-            <div class="contact">
-              <p>
-                Your Name<br />
-                What You Are<br />
-                you@example.com
-              </p>
-            </div>
-            <div class="contact">
-              <p>
-              <i class=icon-github></i> <a href="https://github.com/specter">Github</a><br />
-                <a href="https://twitter.com/yourusername">twitter.com/yourusername</a><br />
-              </p>
-            </div>
-          </div>
-        </div>-->
-
     </body>
 </html>
