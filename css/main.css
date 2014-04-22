@@ -1,11 +1,31 @@
-body {
+html, body {
     padding-top: 50px;
+    height: 100%;
+    background-image:url('../images/binding_dark.png');
+}
+.container {
+    min-height:100%;
 }
 
-.starter-template {
-    padding: 40px 15px;
+#footer {
+    position:relative;
+    height: 80px;
+    margin-top: -70px;
+    padding-top: 10px;
+    background-image:url('../images/simple_dashed.png')
+}
+.copy {
+    text-align: center;
 }
 
-.listing {
-    padding: 40px 15px;
+.icon-black {
+    color:black;
+}
+
+.icon-white{
+    color:white;
+}
+
+.icon-orange {
+    color:orange;
 }
