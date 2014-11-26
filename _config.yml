@@ -1,5 +1,5 @@
 name: mikeodriscoll.ca
 url: http://mikeodriscoll.ca
 markdown: redcarpet
-pygments: true
+highlights: true
 timezone: Canada/Eastern
