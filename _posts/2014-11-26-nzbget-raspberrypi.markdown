@@ -8,7 +8,7 @@ categories: [RaspberryPi, nzbget]
 I’ve created a repo for hosting armhf debs for Raspberry Pi.
 As of this posting it only contains NZBGet deb.
 
-If you’d like to use it please follow the following instructions:
+If you’d like to use it please use the following instructions:
 
 Add the signing keys:
 {% highlight bash %}
