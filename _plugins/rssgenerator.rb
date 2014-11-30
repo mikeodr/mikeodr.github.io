@@ -18,7 +18,7 @@
 # Source: http://github.com/agelber/jekyll-rss
 #
 # Distributed under the MIT license
-# Copyright Assaf Gelber 2013
+# Copyright Assaf Gelber 2014
 
 module Jekyll
   class RssFeed < Page; end
@@ -34,8 +34,7 @@ module Jekyll
     # Returns nothing
     def generate(site)
       require 'rss'
-
-      parser = get_markdown_parser(site.config)
+      require 'cgi/util'
 
       # Create the rss with the help of the RSS module
       rss = RSS::Maker.make("2.0") do |maker|
@@ -46,13 +45,25 @@ module Jekyll
         maker.channel.updated = site.posts.map { |p| p.date  }.max
         maker.channel.copyright = site.config['copyright']
 
-        post_limit = (site.config['rss_post_limit'] - 1 rescue site.posts.count)
+        post_limit = site.config['rss_post_limit'].nil? ? site.posts.count : site.config['rss_post_limit'] - 1
 
         site.posts.reverse[0..post_limit].each do |post|
+          post = post.dup
+          post.render(site.layouts, site.site_payload)
           maker.items.new_item do |item|
+            link = "#{site.config['url']}#{post.url}"
+            item.guid.content = link
             item.title = post.title
-            item.link = "#{site.config['url']}#{post.url}"
-            item.description = parser.convert(post.excerpt)
+            item.link = link
+
+            # As with Jekyll 2.3.0 the post.excerpt function returns a html encoded string.
+            # However, description should be a text only string, so we have to remove all html tags.
+            # To be on the safe side we better wrap it in CDATA tags.
+            item.description = "<![CDATA[" + post.excerpt.gsub(%r{</?[^>]+?>}, '') + "]]>"
+
+            # the whole post content, wrapped in CDATA tags
+            item.content_encoded = "<![CDATA[" + post.content + "]]>"
+
             item.updated = post.date
           end
         end
@@ -63,7 +74,12 @@ module Jekyll
       rss_name = site.config['rss_name'] || "rss.xml"
       full_path = File.join(site.dest, rss_path)
       ensure_dir(full_path)
-      File.open("#{full_path}#{rss_name}", "w") { |f| f.write(rss) }
+
+      # We only have HTML in our content_encoded field which is surrounded by CDATA.
+      # So it should be safe to unescape the HTML.
+      feed = CGI::unescapeHTML(rss.to_s)
+
+      File.open("#{full_path}#{rss_name}", "w") { |f| f.write(feed) }
 
       # Add the feed page to the site pages
       site.pages << Jekyll::RssFeed.new(site, site.dest, rss_path, rss_name)
@@ -106,28 +122,5 @@ module Jekyll
     def ensure_dir(path)
       FileUtils.mkdir_p(path)
     end
-
-    # Gets a parser object for the parser specified in the configuration
-    #
-    # config - the site's configuration hash
-    #
-    # Returns a parser or raises exception if one isn't found
-    def get_markdown_parser(config)
-      return case config['markdown']
-        when 'redcarpet'
-          Jekyll::Converters::Markdown::RedcarpetParser.new config
-        when 'kramdown'
-          Jekyll::Converters::Markdown::KramdownParser.new config
-        when 'rdiscount'
-          Jekyll::Converters::Markdown::RDiscountParser.new config
-        when 'maruku'
-          Jekyll::Converters::Markdown::MarukuParser.new config
-        else
-          STDERR.puts "Invalid Markdown processor: #{config['markdown']}"
-          STDERR.puts "  Valid options are [ maruku | rdiscount | kramdown | redcarpet ]"
-          raise FatalException.new("Invalid Markdown process: #{config['markdown']}")
-      end
-    end
-
   end
 end
