@@ -14,5 +14,6 @@ Building
 
 ```
 sudo apt-get install ruby ruby-dev
-gem install jekyll
+sudo gem install jekyll bundle
+bundle exec jekyll serve
 ```
