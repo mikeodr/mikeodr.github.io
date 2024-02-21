@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Home Assistant Podcast"
-date: 2024-02-02 21:49:00
+date: 2024-02-20 21:49:00
 categores: [HomeAssistant, Podcast]
 ---
 
