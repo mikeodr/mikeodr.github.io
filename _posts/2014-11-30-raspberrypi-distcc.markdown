@@ -14,7 +14,7 @@ to do the coding, but your armhf device to do the compilation.
 
 ## Setup
 
-My post here is based off the following guide: <http://www.openframeworks.cc/setup/raspberrypi/Raspberry-Pi-DISTCC-guide.html>
+My post here is based off the following guide: <https://www.openframeworks.cc/setup/raspberrypi/Raspberry-Pi-DISTCC-guide.html>
 
 > Update 2024: the above link is no longer valid.
 > The remainder of the doc should be reasonably valid.
