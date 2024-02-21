@@ -11,6 +11,7 @@ My post here is based off the following guide: <http://www.openframeworks.cc/set
 
 This guide assumes you are familiar with compiling and have all required build
 tools installed.
+
 ## Setup your Ubuntu PC
 
 Install the following:
@@ -20,7 +21,7 @@ sudo apt-get install distcc
 
 Grab the Raspberry Pi compiler for Linux and remember where you’ve placed it:
 {% highlight bash %}
-git clone https://github.com/raspberrypi/tools.git --depth=1 rpi-tools
+git clone <https://github.com/raspberrypi/tools.git> --depth=1 rpi-tools
 {% endhighlight %}
 I’ll refer to this path as $RPI_TOOLS from now on.
 
@@ -62,13 +63,15 @@ Set your distcc hosts on your RPi
 and add your Ubuntu PC’s ip to the hosts file.
 {% highlight bash %}
 mkdir $HOME/.distcc/
-# Add ip to this file
+
+## Add ip to this file
+
 vim $HOME/.distcc/hosts
 {% endhighlight %}
 
 Now set your make flags to compile with distcc
-Replace the number 8 below with the number of CPU cores on your distcc server for multiple
-simultaneous compiling threads.
+Replace the number 8 below with the number of CPU cores on your distcc 
+server for multiple simultaneous compiling threads.
 {% highlight bash %}
 export MAKEFLAGS=”-j 8 CXX=/usr/lib/distcc/arm-linux-gnueabihf-g++ CC=/usr/lib/distcc/arm-linux-gnueabihf-gcc”
 {% endhighlight %}
@@ -78,4 +81,3 @@ calling:
 {% highlight bash %}
 make
 {% endhighlight %}
-
