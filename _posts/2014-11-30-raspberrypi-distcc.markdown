@@ -6,7 +6,7 @@ categories: ["Raspberry Pi"]
 tags: ["distcc", "compiling", "cross compiling"]
 ---
 
-Typically it can be a bit hard to compile for one architecture on CPU
+Typically it can be a bit hard to compile for one architecture of CPU
 while using another. One way around that is to use `distcc` to take
 advantage of distributed complication. Thus using other machines you
 have handy to do the compiling for you natively. Use your x86 machine
@@ -14,7 +14,7 @@ to do the coding, but your armhf device to do the compilation.
 
 ## Setup
 
-My post here is based off the following guide: <https://www.openframeworks.cc/setup/raspberrypi/Raspberry-Pi-DISTCC-guide.html>
+My post here is based off the following guide: `https://www.openframeworks.cc/setup/raspberrypi/Raspberry-Pi-DISTCC-guide.html`
 
 > Update 2024: the above link is no longer valid.
 > The remainder of the doc should be reasonably valid.

@@ -9,7 +9,9 @@ tags: ["home assistant", "podcast", "home automation"]
 It's been a minute since I've updated my site. I figure it's a great
 time to add in some things I've been up to.
 
-Back in September 2023 Phil and Rohan from the [Home Assistant Podcast](https://hasspodcast.io)
+Back in September 2023 [Phil](https://philhawthorne.com/)
+and [Rohan](https://pages.karamandi.com/)
+from the [Home Assistant Podcast](https://hasspodcast.io)
 had me on as a guest for [episode 118](https://hasspodcast.io/ha118/).
 This started off with a [competition](https://hasspodcast.io/ha092/)
 to send in your coolest automation for the Home Assistant Podcast birthday.
@@ -67,7 +69,7 @@ timing events to use the
 [AppleTV Remote](https://www.home-assistant.io/integrations/apple_tv/#remote)
 input to force it to go full screen.
 
-## Previous Version
+### Previous Version
 
 Before I picked up an AppleTV an old MiBox S was [running the show](https://github.com/mikeodr/Home-AssistantConfig/blob/1c70a4b2712358e7216481b8bf891073b4ba5555/packages/nursery.yaml#L140-L202).
 It would used the Android debugger tool `adb` to send the commands.
