@@ -5,8 +5,6 @@ date: 2024-02-02 21:49:00
 categores: [HomeAssistant, Podcast]
 ---
 
-# Home Assistant Podcast
-
 It's been a minute since I've updated my site. I figure it's a great
 time to add in some things I've been up to.
 
