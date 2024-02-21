@@ -57,7 +57,7 @@ looks like so:
         command: "home"
 {% endhighlight %}
 
-This [fakes a input](https://github.com/mikeodr/Home-AssistantConfig/blob/22099520908648782ac57cbe3f97ed89b9ef1b53/packages/homekit.yaml#L17-L24)
+This [fakes an input](https://github.com/mikeodr/Home-AssistantConfig/blob/22099520908648782ac57cbe3f97ed89b9ef1b53/packages/homekit.yaml#L17-L24)
 into HomeKit to
 [display a linked camera](https://github.com/mikeodr/Home-AssistantConfig/blob/22099520908648782ac57cbe3f97ed89b9ef1b53/packages/homekit.yaml#L53)[^1]
 This forces the camera feed to pop up on the AppleTV display, and with 
