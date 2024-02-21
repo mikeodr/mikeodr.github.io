@@ -6,8 +6,6 @@ My website based on jekyll:
 
 http://jekyllrb.com/
 
-http://jekyllbootstrap.com/
-
 
 Building
 --------
