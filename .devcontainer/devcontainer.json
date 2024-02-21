@@ -4,7 +4,9 @@
     "vscode": {
       "extensions": [
         "DavidAnson.vscode-markdownlint",
-        "streetsidesoftware.code-spell-checker"
+        "streetsidesoftware.code-spell-checker",
+        "github.vscode-github-actions",
+        "GitHub.vscode-pull-request-github"
       ]
     }
   }
