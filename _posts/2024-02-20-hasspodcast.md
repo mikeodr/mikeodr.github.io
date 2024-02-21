@@ -1,8 +1,9 @@
 ---
 layout: post
-title: "Home Assistant Podcast"
+title: "Home Assistant Podcast Appearance"
 date: 2024-02-20 21:49:00
-categores: [HomeAssistant, Podcast]
+categories: ["Home Assistant", "Podcast"]
+tags: ["home assistant", "podcast", "home automation"]
 ---
 
 It's been a minute since I've updated my site. I figure it's a great
@@ -10,7 +11,7 @@ time to add in some things I've been up to.
 
 Back in September 2023 Phil and Rohan from the [Home Assistant Podcast](https://hasspodcast.io)
 had me on as a guest for [episode 118](https://hasspodcast.io/ha118/).
-This started off with a [compeition](https://hasspodcast.io/ha092/)
+This started off with a [competition](https://hasspodcast.io/ha092/)
 to send in your coolest automation for the Home Assistant Podcast birthday.
 I sent in mine and got runner up!
 It was great to be on the podcast, and wonderful to meet Phil and Rohan.
@@ -25,7 +26,7 @@ since my discussion on the podcast.
 But the latest [iteration](https://github.com/mikeodr/Home-AssistantConfig/blob/22099520908648782ac57cbe3f97ed89b9ef1b53/packages/nursery.yaml#L634-L662)
 looks like so:
 
-{% highlight yaml %}
+```yaml
 - alias: Show Nursery Camera on TV automatically
   id: nursery_show_camera_automatically
   trigger:
@@ -55,7 +56,7 @@ looks like so:
         entity_id: remote.apple_tv_living_room
       data:
         command: "home"
-{% endhighlight %}
+```
 
 This [fakes an input](https://github.com/mikeodr/Home-AssistantConfig/blob/22099520908648782ac57cbe3f97ed89b9ef1b53/packages/homekit.yaml#L17-L24)
 into HomeKit to
@@ -72,10 +73,12 @@ Before I picked up an AppleTV an old MiBox S was [running the show](https://gith
 It would used the Android debugger tool `adb` to send the commands.
 This would power on the system, set the set the RTSP stream directly.
 More direct and straightforward than the AppleTVs timing method.
-Hopefully Apple will allow a direct RTSP stream one day for less brittle timing in the future.
+Hopefully Apple will allow a direct RTSP stream one day for less
+brittle timing in the future.
 It looked like so:
 
-{% highlight yaml %}
+```yaml
+{% raw %}
 - alias: Toggle TV Monitor
   trigger:
     platform: state
@@ -139,8 +142,13 @@ It looked like so:
                       data:
                         entity_id: media_player.living_room_mi_box_s
                         command: "POWER"
-{% endhighlight %}
+{% endraw %}
+```
 
-#### Footnotes
+## Video
+
+Here's the YouTube version of the podcast.
+
+{% include embed/youtube.html id='lh2jugGnjJc' %}
 
 [^1]: [Linked Doorbell Sensor](https://www.home-assistant.io/integrations/homekit/#linked_doorbell_sensor){:target="_blank"}.
