@@ -6,7 +6,7 @@ permalink: /about/
 
 I am a software developer based in Kitchener, Ontario.
 
-I currently work for [Arctic Wolf](https://arcticwolf.com)
+I currently work for [Arctic Wolf](https://arcticwolf.com){:target="_blank"}
 
 <p>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
