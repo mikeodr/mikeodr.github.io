@@ -7,7 +7,7 @@ tags: ["atlantis", "self hosted", "IAC", "terraform", "github", "cloudflare", "t
 ---
 
 I've been interacting with [Atlantis](https://www.runatlantis.io/){:target="_blank"}
-at work. But my I am not responsible for its deployment or use,
+at work. But I am not responsible for its deployment or configuration,
 it was a bit of a magic black box.
 
 Considering I use some terraform for managing my personal Cloudflare DNS settings,
