@@ -7,7 +7,8 @@ tags: ["atlantis", "self hosted", "IAC", "terraform", "github", "cloudflare", "t
 ---
 
 I've been interacting with [Atlantis](https://www.runatlantis.io/){:target="_blank"}
-But my I am not responsible for it's deployment or use, it was a bit of a black box.
+at work. But my I am not responsible for its deployment or use,
+it was a bit of a magic black box.
 
 Considering I use some terraform for managing my personal Cloudflare DNS settings,
 I figured I may as well try and get Atlantis setup for my own use!
