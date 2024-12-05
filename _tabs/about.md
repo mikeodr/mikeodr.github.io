@@ -8,7 +8,7 @@ title: About
 Hi I'm Mike O'Driscoll 👋
 
 I am a software developer based in Kitchener, Ontario.
-I like to work on my automating my home in my spare time.
+I like to work on automating my home in my spare time.
 
 I currently work at [Tailscale](https://tailscale.com/){:target="_blank"}
 
