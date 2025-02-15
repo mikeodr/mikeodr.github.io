@@ -17,8 +17,8 @@ timezone: America/Toronto
 title: Unused bytes # the main title
 
 tagline: >-
- A bunch of unused bytes, thoughts, and projects.
- Mostly focused on my (mis)adventures in home automation and my home infrastructure.
+  A bunch of unused bytes, thoughts, and projects.
+  Mostly focused on my (mis)adventures in home automation and my home infrastructure.
 
 description: >- # used by seo meta and the atom feed
   Updates and ideas from Mike O'Driscoll
@@ -194,3 +194,5 @@ jekyll-archives:
   permalinks:
     tag: /tags/:name/
     category: /categories/:name/
+
+include: [".well-known"]
